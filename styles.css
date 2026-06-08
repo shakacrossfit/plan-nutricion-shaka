@@ -127,8 +127,8 @@ p { text-wrap: pretty; }
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 70px; gap: 1rem; }
 
-.brand { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; }
-.brand-logo { height: 46px; width: auto; flex: none; }
+.brand { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; }
+.brand-logo { height: 52px; width: auto; flex: none; }
 .brand-text { display: inline-flex; align-items: baseline; gap: .4ch; line-height: 1; }
 .brand-mark { font-weight: 900; letter-spacing: .02em; color: var(--white); font-size: 1.35rem; }
 .brand-sub { font-family: var(--mono); font-size: .72rem; letter-spacing: .22em; color: var(--accent); text-transform: uppercase; }
@@ -227,18 +227,19 @@ section[id] { scroll-margin-top: 84px; }
   .split-reverse .split-media { order: 2; }
 }
 
-/* ---------- 8. Problema ---------- */
-.problem-list { list-style: none; padding: 0; margin-top: 1.75rem; display: grid; gap: .85rem; }
-.problem-list li {
-  position: relative; padding: 1rem 1.1rem 1rem 3rem;
-  background: var(--paper); border: 1px solid #E4E8EA; border-radius: var(--radius-sm);
-  font-weight: 500;
+/* ---------- 8. Problema (lista editorial, 2 columnas) ---------- */
+.problem-list { list-style: none; padding: 0; margin-top: 2.25rem; display: grid; gap: 0; }
+@media (min-width: 760px) {
+  .problem-list { grid-template-columns: 1fr 1fr; column-gap: clamp(2rem, 5vw, 4rem); }
 }
-.section-light:nth-of-type(even) .problem-list li { background: var(--white); }
+.problem-list li {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1.15rem .15rem; border-top: 1px solid #DCE1E4;
+  font-size: clamp(1.02rem, .98rem + .3vw, 1.16rem); font-weight: 500; color: var(--ink);
+}
 .problem-list li::before {
-  content: ""; position: absolute; left: 1.1rem; top: 50%; transform: translateY(-50%);
-  width: 8px; height: 8px; border-radius: 2px; background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(0,229,255,.18);
+  content: ""; flex: none; margin-top: .6em;
+  width: 26px; height: 3px; border-radius: 3px; background: var(--accent);
 }
 
 /* ---------- 9. Check list (para quién / precio) ---------- */

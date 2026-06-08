@@ -52,8 +52,9 @@
   }
 
   /* ---- Animaciones de entrada (reveal) ---- */
+  // OJO: el hero NO se incluye: debe verse siempre, sin depender de la animación.
   var revealEls = document.querySelectorAll(
-    ".section-title, .section-intro, .section-lead, .problem-list li, .check-list li, .feature, .step, .price-card, .split-media, .faq-item, .hero-stats, .hero-title, .hero-subtitle, .hero-lead, .btn-row, .tag-row"
+    ".section-title, .section-intro, .section-lead, .problem-list li, .check-list li, .feature, .step, .price-card, .split-media, .faq-item, .tag-row, .section .btn-row"
   );
 
   var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -80,6 +81,12 @@
     );
 
     revealEls.forEach(function (el) { io.observe(el); });
+
+    // Red de seguridad: si el observer no dispara (pestaña en 2º plano,
+    // renderers headless, etc.), mostrar todo igualmente. Nunca dejar contenido oculto.
+    setTimeout(function () {
+      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    }, 1100);
   }
 
   /* ---- Año del footer ---- */
