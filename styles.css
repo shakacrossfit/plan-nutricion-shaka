@@ -34,7 +34,8 @@
 
   --space-section: clamp(3.5rem, 8vw, 6.75rem);
 
-  --font: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Barlow Condensed", "Barlow", system-ui, sans-serif; /* titulares atléticos */
   --mono: "Spline Sans Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
   /* z-index scale */
@@ -65,7 +66,7 @@ body {
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 
-h1, h2, h3 { line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.04; font-weight: 700; letter-spacing: 0; text-wrap: balance; }
 p { text-wrap: pretty; }
 
 /* ---------- 3. Utilidades ---------- */
@@ -130,7 +131,7 @@ p { text-wrap: pretty; }
 .brand { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; }
 .brand-logo { height: 52px; width: auto; flex: none; }
 .brand-text { display: inline-flex; align-items: baseline; gap: .4ch; line-height: 1; }
-.brand-mark { font-weight: 900; letter-spacing: .02em; color: var(--white); font-size: 1.35rem; }
+.brand-mark { font-family: var(--font-display); font-weight: 800; letter-spacing: .01em; color: var(--white); font-size: 1.55rem; text-transform: uppercase; }
 .brand-sub { font-family: var(--mono); font-size: .72rem; letter-spacing: .22em; color: var(--accent); text-transform: uppercase; }
 
 .main-nav { display: flex; align-items: center; }
@@ -189,8 +190,8 @@ p { text-wrap: pretty; }
   border-radius: 999px; background: rgba(0,229,255,.06);
 }
 .hero-title {
-  font-size: clamp(2.5rem, 2rem + 6vw, 4.6rem); font-weight: 900;
-  letter-spacing: -0.025em; line-height: 0.98; margin-bottom: 1.1rem;
+  font-size: clamp(2.9rem, 2.2rem + 7vw, 5.5rem); font-weight: 800;
+  letter-spacing: 0; line-height: 0.95; margin-bottom: 1.1rem; text-transform: uppercase;
 }
 .hero-title .accent { color: var(--accent); }
 .hero-subtitle { font-size: clamp(1.15rem, 1rem + 1.1vw, 1.55rem); font-weight: 600; color: var(--white); margin-bottom: .9rem; max-width: 30ch; }
@@ -204,7 +205,7 @@ section[id] { scroll-margin-top: 84px; }
 .section-light { background: var(--white); color: var(--ink); }
 .section-light:nth-of-type(even) { background: var(--paper); }
 
-.section-title { font-size: clamp(1.75rem, 1.3rem + 2.4vw, 2.75rem); font-weight: 800; }
+.section-title { font-size: clamp(2rem, 1.4rem + 2.8vw, 3.15rem); font-weight: 700; }
 .section-dark .section-title { color: var(--white); }
 .section-intro, .section-lead { margin-top: .9rem; max-width: 60ch; font-size: clamp(1.02rem, .98rem + .35vw, 1.18rem); }
 .section-intro { color: var(--ink-soft); }
@@ -261,7 +262,7 @@ section[id] { scroll-margin-top: 84px; }
   flex: none; width: 30px; height: 30px; display: grid; place-items: center;
   background: var(--accent); color: #001318; font-weight: 900; border-radius: 8px; font-size: .95rem;
 }
-.feature h3 { font-size: 1.04rem; font-weight: 700; margin-bottom: .2rem; letter-spacing: -.01em; }
+.feature h3 { font-size: 1.18rem; font-weight: 700; margin-bottom: .2rem; letter-spacing: 0; }
 .feature p { font-size: .94rem; color: var(--ink-soft); }
 
 /* ---------- 11. Cómo funciona (pasos) ---------- */
@@ -275,7 +276,7 @@ section[id] { scroll-margin-top: 84px; }
   font-family: var(--mono); font-weight: 600; font-size: 1.05rem; color: var(--accent);
   width: 2.5ch; padding-top: .15rem;
 }
-.step h3 { font-size: 1.12rem; font-weight: 700; color: var(--white); margin-bottom: .25rem; letter-spacing: -.01em; }
+.step h3 { font-size: 1.26rem; font-weight: 700; color: var(--white); margin-bottom: .25rem; letter-spacing: 0; }
 .step p { color: var(--on-dark-soft); font-size: .98rem; }
 
 /* ---------- 12. Precio ---------- */
@@ -334,7 +335,7 @@ section[id] { scroll-margin-top: 84px; }
     radial-gradient(60% 80% at 50% 0%, rgba(0,229,255,.16), transparent 70%),
     linear-gradient(180deg, #0A0B0D, #000);
 }
-.cta-title { font-size: clamp(1.9rem, 1.4rem + 3vw, 3.1rem); font-weight: 900; letter-spacing: -.025em; }
+.cta-title { font-size: clamp(2.2rem, 1.5rem + 3.4vw, 3.6rem); font-weight: 800; letter-spacing: 0; text-transform: uppercase; }
 .cta-lead { margin: 1.1rem auto 0; max-width: 56ch; color: var(--on-dark-soft); font-size: clamp(1.02rem, .98rem + .4vw, 1.2rem); }
 
 /* ---------- 16. Footer ---------- */
@@ -358,6 +359,23 @@ section[id] { scroll-margin-top: 84px; }
 }
 .whatsapp-float svg { width: 30px; height: 30px; }
 .whatsapp-float:hover { transform: scale(1.07); }
+
+/* ---------- 17b. Barra CTA fija en móvil ---------- */
+.mobile-cta { display: none; }
+@media (max-width: 860px) {
+  .mobile-cta {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
+    display: flex; gap: .6rem; align-items: stretch;
+    padding: .55rem .8rem calc(.55rem + env(safe-area-inset-bottom, 0px));
+    background: rgba(10,11,13,.94); backdrop-filter: saturate(160%) blur(10px);
+    border-top: 1px solid var(--gray-line);
+  }
+  .mobile-cta-form { flex: 1; min-height: 50px; padding-block: .8rem; }
+  .mobile-cta-wa { flex: none; width: 54px; min-height: 50px; padding: 0; }
+  .mobile-cta-wa .ico { width: 1.6em; height: 1.6em; }
+  .whatsapp-float { display: none; } /* la barra ya incluye WhatsApp */
+  body { padding-bottom: 74px; }     /* deja sitio para que la barra no tape el footer */
+}
 
 /* ---------- 18. Reveal (solo con JS; no oculta contenido sin JS) ---------- */
 .js .reveal { opacity: 0; transform: translateY(18px); }
