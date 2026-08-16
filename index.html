@@ -1,65 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- impeccable-disable single-font, numbered-section-markers -->
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plan de Nutrición Shaka CrossFit | Come mejor, entrena mejor</title>
-  <meta name="description" content="Plan de nutrición práctico de 60 días para alumnos de Shaka CrossFit Madrid y gente que entrena. 3 planes de 20 días, adaptados a tu objetivo, horarios, gustos y supermercado habitual. 60 €." />
-  <meta name="theme-color" content="#0A0B0D" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050607">
+  <meta name="description" content="Organiza tus comidas con una guía práctica adaptada a tu entrenamiento, horarios y gustos. Tres bloques progresivos durante 60 días. Exclusiva para socios de Shaka CrossFit.">
+  <link rel="canonical" href="https://shakacrossfit.github.io/plan-nutricion-shaka/">
+  <meta property="og:site_name" content="Shaka CrossFit">
+  <meta property="og:title" content="Guía de Alimentación Shaka">
+  <meta property="og:description" content="Menos improvisación y más claridad para organizar tus comidas alrededor de tu vida y tu entrenamiento.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:url" content="https://shakacrossfit.github.io/plan-nutricion-shaka/">
+  <meta property="og:image" content="https://shakacrossfit.github.io/plan-nutricion-shaka/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="Guía de Alimentación Shaka, exclusiva para socios">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guía de Alimentación Shaka">
+  <meta name="twitter:description" content="3 bloques progresivos · 2 revisiones · 60 días · 60 €. Exclusiva para socios de Shaka CrossFit.">
+  <meta name="twitter:image" content="https://shakacrossfit.github.io/plan-nutricion-shaka/og.png">
+  <title>Guía de Alimentación Shaka | Exclusiva para socios</title>
 
-  <!-- Open Graph / Twitter (vista previa al compartir en WhatsApp / Instagram).
-       URLs absolutas a tu GitHub Pages. Si cambias de dominio, actualiza estas 4 líneas de URL. -->
-  <link rel="canonical" href="https://shakacrossfit.github.io/plan-nutricion-shaka/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://shakacrossfit.github.io/plan-nutricion-shaka/" />
-  <meta property="og:title" content="Plan de Nutrición Shaka CrossFit" />
-  <meta property="og:description" content="Come mejor, entrena mejor y organiza tu alimentación sin complicarte. Plan práctico de 60 días, 60 €." />
-  <meta property="og:image" content="https://shakacrossfit.github.io/plan-nutricion-shaka/img/hero-entreno.jpg" />
-  <meta property="og:image:alt" content="Entrenamiento de fuerza en Shaka CrossFit Madrid" />
-  <meta property="og:locale" content="es_ES" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Plan de Nutrición Shaka CrossFit" />
-  <meta name="twitter:description" content="Come mejor, entrena mejor y organiza tu alimentación sin complicarte. Plan práctico de 60 días, 60 €." />
-  <meta name="twitter:image" content="https://shakacrossfit.github.io/plan-nutricion-shaka/img/hero-entreno.jpg" />
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="preload" as="image" href="img/hero-shaka-960.jpg" media="(max-width: 768px)">
+  <link rel="preload" as="image" href="img/hero-shaka-1600.jpg" media="(min-width: 769px)">
 
-  <!-- Favicon SVG (rayo Shaka en cian). Sustituible por tu favicon real. -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0B0D'/%3E%3Cpath d='M17.5 4 8 18h6l-1.5 10L24 13h-6.5z' fill='%2300E5FF'/%3E%3C/svg%3E" />
-
-  <!-- Tipografías: Archivo (display + cuerpo) + Spline Sans Mono (números/etiquetas) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2">
+  <script src="script.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- ============ HEADER ============ -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="Shaka CrossFit Madrid, inicio">
-        <!-- Escudo + texto. Coloca tu logo en img/logo.png. Si no carga, queda solo el texto. -->
-        <img src="img/logo.png" alt="" class="brand-logo" aria-hidden="true"
-             onerror="this.remove();" />
-        <span class="brand-text">
-          <span class="brand-mark">SHAKA</span><span class="brand-sub">CROSSFIT</span>
+      <a class="brand" href="#inicio" aria-label="Guía de Alimentación Shaka, inicio">
+        <img src="img/logo-120.png" srcset="img/logo-120.png 1x, img/logo-240.png 2x" width="108" height="120" alt="">
+        <span>
+          <strong>Shaka</strong>
+          <small>Guía de Alimentación</small>
         </span>
       </a>
 
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="visually-hidden" id="nav-toggle-label">Abrir menú</span>
+        <span aria-hidden="true"></span>
+      </button>
+
       <nav class="main-nav" aria-label="Navegación principal">
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="visually-hidden">Abrir menú</span>
-        </button>
         <ul class="nav-menu" id="nav-menu">
-          <li><a href="#que-es">Qué es</a></li>
-          <li><a href="#incluye">Qué incluye</a></li>
+          <li><a href="#incluye">Qué recibes</a></li>
           <li><a href="#como-funciona">Cómo funciona</a></li>
           <li><a href="#precio">Precio</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li class="nav-cta-item">
-            <a class="btn btn-primary btn-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSftawxAbCEo_Q98-P0qoqUacB3MHXb90CQI1u-8iAF9OU73yw/viewform" target="_blank" rel="noopener">Rellenar formulario</a>
+          <li><a href="#faq">Dudas</a></li>
+          <li class="nav-cta">
+            <a class="button button-primary button-small" href="https://docs.google.com/forms/d/e/1FAIpQLSftawxAbCEo_Q98-P0qoqUacB3MHXb90CQI1u-8iAF9OU73yw/viewform" target="_blank" rel="noopener">Solicitar mi guía</a>
           </li>
         </ul>
       </nav>
@@ -67,243 +66,282 @@
   </header>
 
   <main id="contenido">
-
-    <!-- ============ 1. HERO ============ -->
     <section class="hero" id="inicio">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <p class="hero-stats">3 planes · 20 días cada uno · 60 €</p>
-        <h1 class="hero-title">Plan de Nutrición<br /><span class="accent">Shaka CrossFit</span></h1>
-        <p class="hero-subtitle">Come mejor, entrena mejor y organiza tu alimentación sin complicarte.</p>
-        <p class="hero-lead">Un plan práctico de 60 días, adaptado a tu objetivo, tus horarios, tus gustos y tu forma real de comprar y cocinar.</p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSftawxAbCEo_Q98-P0qoqUacB3MHXb90CQI1u-8iAF9OU73yw/viewform" target="_blank" rel="noopener">Rellenar formulario</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/34697287928" target="_blank" rel="noopener">
-            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.02ZM12.05 20.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
-            Escribir por WhatsApp
-          </a>
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="hero-meta">Exclusivo para socios · 60 días</p>
+        <h1>Deja de improvisar tus comidas</h1>
+        <p class="hero-subtitle">Cantidades, preparaciones y listas de la compra adaptadas a tu rutina y entrenamiento.</p>
+
+        <div class="hero-decision" aria-label="Datos principales del servicio">
+          <strong>3 bloques · 2 revisiones · 60 €</strong>
+        </div>
+
+        <p class="hero-review">Revisada por Claudio con apoyo de IA. No sustituye a un dietista-nutricionista.</p>
+
+        <div class="button-row">
+          <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSftawxAbCEo_Q98-P0qoqUacB3MHXb90CQI1u-8iAF9OU73yw/viewform" target="_blank" rel="noopener">Solicitar mi guía</a>
+          <a class="button button-secondary" href="#muestra">Ver una muestra</a>
+        </div>
+
+        <p class="hero-note">Formulario: 4 min · Revisamos tu solicitud antes de pedirte el pago.</p>
+      </div>
+    </section>
+
+    <section class="section samples-section" id="muestra">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Mira la guía por dentro</h2>
+          <p>Una muestra anonimizada del formato que recibirás.</p>
+        </div>
+
+        <div class="sample-gallery">
+          <figure class="sample">
+            <button type="button" class="sample-open" aria-haspopup="dialog" aria-controls="sample-dialog" data-sample="img/muestras/01-resumen-anonimizado.png" data-alt="Resumen anonimizado de un bloque de la Guía de Alimentación Shaka">
+              <img src="img/muestras/01-resumen-anonimizado.png" width="1200" height="1697" loading="lazy" decoding="async" alt="Resumen anonimizado de un bloque de la Guía de Alimentación Shaka">
+              <span>Ver ampliada</span>
+            </button>
+            <figcaption>Resumen</figcaption>
+          </figure>
+
+          <figure class="sample">
+            <button type="button" class="sample-open" aria-haspopup="dialog" aria-controls="sample-dialog" data-sample="img/muestras/02-dia-completo.png" data-alt="Día completo de comidas con ingredientes, cantidades y preparaciones">
+              <img src="img/muestras/02-dia-completo.png" width="1200" height="1697" loading="lazy" decoding="async" alt="Día completo de comidas con ingredientes, cantidades y preparaciones">
+              <span>Ver ampliada</span>
+            </button>
+            <figcaption>Comidas y cantidades</figcaption>
+          </figure>
+
+          <figure class="sample">
+            <button type="button" class="sample-open" aria-haspopup="dialog" aria-controls="sample-dialog" data-sample="img/muestras/03-lista-compra.png" data-alt="Lista semanal de la compra organizada por categorías">
+              <img src="img/muestras/03-lista-compra.png" width="1200" height="1697" loading="lazy" decoding="async" alt="Lista semanal de la compra organizada por categorías">
+              <span>Ver ampliada</span>
+            </button>
+            <figcaption>Lista de la compra</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- ============ 2. PROBLEMA ============ -->
-    <section class="section section-light" id="que-es">
-      <div class="container narrow">
-        <h2 class="section-title">Entrenas duro. Tu alimentación va por libre.</h2>
-        <p class="section-intro">Si te suena alguna de estas, este plan es justo para eso:</p>
-        <ul class="problem-list">
-          <li>Entrenas, pero no tienes clara tu alimentación.</li>
-          <li>Comes bien algunos días, pero sin estructura.</li>
-          <li>No sabes qué comprar cada semana.</li>
-          <li>Te cuesta organizar las comidas con tus horarios.</li>
-          <li>Quieres mejorar, pero no quieres una dieta imposible.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ 3. PARA QUIÉN ES ============ -->
-    <section class="section section-dark" id="para-quien">
+    <section class="section includes-section" id="incluye">
       <div class="container">
-        <div class="split">
-          <div class="split-text">
-            <h2 class="section-title">Este plan es para ti si…</h2>
-            <ul class="check-list">
-              <li>Quieres perder grasa</li>
-              <li>Quieres ganar masa muscular</li>
-              <li>Quieres mejorar tu composición corporal</li>
-              <li>Quieres rendir mejor entrenando</li>
-              <li>Necesitas organizar tus comidas</li>
-              <li>Buscas algo práctico y fácil de seguir</li>
-              <li>Entrenas CrossFit y quieres acompañarlo con mejor alimentación</li>
-            </ul>
+        <div class="section-heading">
+          <h2>Qué recibes</h2>
+          <p>Cada bloque contiene siete días de comidas que se repiten durante 20 días.</p>
+        </div>
+
+        <div class="includes-layout">
+          <article class="include-lead">
+            <span class="include-number">3</span>
+            <h3>Tres bloques progresivos</h3>
+            <p>Un bloque nuevo cada 20 días.</p>
+          </article>
+
+          <div class="include-list">
+            <article>
+              <h3>Una semana por bloque</h3>
+              <p>Siete días organizados para facilitar la compra y la constancia.</p>
+            </article>
+            <article>
+              <h3>Cantidades y preparaciones</h3>
+              <p>Ingredientes, gramos y pasos claros para cada comida.</p>
+            </article>
+            <article>
+              <h3>Lista de la compra</h3>
+              <p>Una lista organizada en cada bloque.</p>
+            </article>
+            <article>
+              <h3>Dos revisiones</h3>
+              <p>Ajustamos los bloques 2 y 3 según tu experiencia.</p>
+            </article>
           </div>
-          <figure class="split-media">
-            <img src="img/entreno-fuerza.jpg" width="1000" height="667" loading="lazy" decoding="async"
-                 alt="Atleta entrenando fuerza con mancuerna en un box de CrossFit" />
-          </figure>
         </div>
+
+        <aside class="support-strip">
+          <h3>Dudas por WhatsApp</h3>
+          <p>Uso de la guía y sustituciones sencillas. Respuesta en hasta 48 horas laborables.</p>
+        </aside>
       </div>
     </section>
 
-    <!-- ============ 4. QUÉ INCLUYE ============ -->
-    <section class="section section-light" id="incluye">
+    <section class="section process-section" id="como-funciona">
       <div class="container">
-        <h2 class="section-title">Qué incluye</h2>
-        <p class="section-intro">Todo lo necesario para comer con cabeza sin volverte loco.</p>
-        <div class="split split-reverse">
-          <ul class="feature-grid">
-            <li class="feature"><span class="feature-ico" aria-hidden="true">✓</span><div><h3>3 planes nutricionales</h3><p>Uno nuevo cada 20 días, para no aburrirte y ajustar sobre la marcha.</p></div></li>
-            <li class="feature"><span class="feature-ico" aria-hidden="true">✓</span><div><h3>Ingredientes exactos</h3><p>Cantidades claras, sin adivinar a ojo.</p></div></li>
-            <li class="feature"><span class="feature-ico" aria-hidden="true">✓</span><div><h3>Preparaciones paso a paso</h3><p>Recetas sencillas, pensadas para el día a día.</p></div></li>
-            <li class="feature"><span class="feature-ico" aria-hidden="true">✓</span><div><h3>Lista de la compra</h3><p>Organizada para que la compra sea rápida.</p></div></li>
-            <li class="feature"><span class="feature-ico" aria-hidden="true">✓</span><div><h3>Adaptación a tu súper</h3><p>Pensada para Mercadona, DIA u otro supermercado.</p></div></li>
-            <li class="feature"><span class="feature-ico" aria-hidden="true">✓</span><div><h3>Ajustes con tu feedback</h3><p>Afinamos según cómo te vaya yendo.</p></div></li>
-            <li class="feature"><span class="feature-ico" aria-hidden="true">✓</span><div><h3>Suplementación si procede</h3><p>Recomendaciones solo cuando aportan algo.</p></div></li>
-          </ul>
-          <figure class="split-media">
-            <img src="img/comida-plan.jpg" width="1000" height="1000" loading="lazy" decoding="async"
-                 alt="Bowl saludable con verduras, proteína y semillas, ejemplo de comida del plan" />
-          </figure>
+        <div class="section-heading">
+          <h2>Cómo funciona</h2>
         </div>
-      </div>
-    </section>
 
-    <!-- ============ 5. CÓMO FUNCIONA ============ -->
-    <section class="section section-dark" id="como-funciona">
-      <div class="container narrow">
-        <h2 class="section-title">Cómo funciona</h2>
-        <p class="section-intro">Seis pasos sencillos, sin app ni complicaciones.</p>
-        <ol class="steps">
-          <li class="step"><span class="step-num">01</span><div><h3>Rellenas el formulario</h3><p>Nos cuentas tu objetivo, horarios, gustos y dónde compras.</p></div></li>
-          <li class="step"><span class="step-num">02</span><div><h3>Revisamos tu objetivo y contexto</h3><p>Estudiamos tu caso para que el plan tenga sentido para ti.</p></div></li>
-          <li class="step"><span class="step-num">03</span><div><h3>Confirmas el pago</h3><p>Efectivo en el box o PayPal. Sin pagos automáticos.</p></div></li>
-          <li class="step"><span class="step-num">04</span><div><h3>Recibes tu primer plan de 20 días</h3><p>Con comidas, cantidades y lista de la compra.</p></div></li>
-          <li class="step"><span class="step-num">05</span><div><h3>Nos das feedback</h3><p>Qué funciona, qué te cuesta, qué cambiarías.</p></div></li>
-          <li class="step"><span class="step-num">06</span><div><h3>Recibes el segundo y tercer plan</h3><p>Ajustados a lo que ya sabemos que te encaja.</p></div></li>
+        <ol class="process-list">
+          <li>
+            <span>01</span>
+            <div><h3>Solicitud</h3><p>Rellenas el formulario. Tarda unos 4 minutos.</p></div>
+          </li>
+          <li>
+            <span>02</span>
+            <div><h3>Revisión y pago</h3><p>Comprobamos que el servicio encaja. Si es así, te damos una fecha estimada y las instrucciones de pago.</p></div>
+          </li>
+          <li>
+            <span>03</span>
+            <div><h3>Entrega</h3><p>Tras verificar el pago, compartimos el primer PDF en una carpeta privada de Google Drive.</p></div>
+          </li>
+          <li>
+            <span>04</span>
+            <div><h3>Ajustes</h3><p>Hacemos dos revisiones y aplicamos los cambios al bloque siguiente.</p></div>
+          </li>
         </ol>
       </div>
     </section>
 
-    <!-- ============ 6. PRECIO ============ -->
-    <section class="section section-light" id="precio">
-      <div class="container narrow">
-        <h2 class="section-title center">Precio</h2>
-        <div class="price-card">
-          <div class="price-head">
-            <p class="price-amount"><span class="price-num">60</span><span class="price-cur">€</span></p>
-            <p class="price-desc">3 planes durante aproximadamente 60 días</p>
-          </div>
-          <ul class="check-list price-includes">
-            <li>3 planes nutricionales (1 cada 20 días)</li>
-            <li>Lista de la compra adaptada a tu supermercado</li>
-            <li>Ajustes según tu feedback</li>
+    <section class="section fit-section" id="para-quien">
+      <div class="container fit-layout">
+        <div class="fit-positive">
+          <h2>Encaja si…</h2>
+          <ul class="check-list">
+            <li>Eres socio activo de Shaka.</li>
+            <li>Quieres organizar tus comidas alrededor del entrenamiento.</li>
+            <li>Buscas cantidades, preparaciones y listas de la compra.</li>
           </ul>
-          <div class="price-pay">
-            <p class="price-pay-title">Métodos de pago</p>
-            <p>Efectivo en el box o PayPal.</p>
-            <p class="price-note">El pago por PayPal se confirma manualmente antes de preparar el plan.</p>
-          </div>
-          <div class="btn-row btn-row-center">
-            <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSftawxAbCEo_Q98-P0qoqUacB3MHXb90CQI1u-8iAF9OU73yw/viewform" target="_blank" rel="noopener">Rellenar formulario</a>
-            <!-- TODO PayPal: cuando tengas el enlace, sustituye PAYPAL_LINK_PENDIENTE por la URL real y quita aria-disabled. -->
-            <a class="btn btn-outline-dark" href="PAYPAL_LINK_PENDIENTE" aria-disabled="true" title="Enlace de PayPal pendiente">Pagar con PayPal (pronto)</a>
-          </div>
         </div>
+
+        <aside class="fit-exclusions">
+          <h2>Necesitas otro tipo de atención si…</h2>
+          <p>Hay embarazo o lactancia, una patología o medicación relacionada con la alimentación, alergias graves o antecedentes de un trastorno de la conducta alimentaria.</p>
+          <p>En esos casos no solicitaremos el pago y te recomendaremos acudir a un profesional sanitario.</p>
+        </aside>
       </div>
     </section>
 
-    <!-- ============ 7. SUPERMERCADO Y VIDA REAL ============ -->
-    <section class="section section-dark" id="supermercado">
+    <section class="section testimonials-section" id="testimonios">
       <div class="container">
-        <div class="split">
-          <figure class="split-media">
-            <img src="img/compra-supermercado.jpg" width="1000" height="667" loading="lazy" decoding="async"
-                 alt="Verduras y fruta fresca recién compradas sobre una mesa de madera" />
-          </figure>
-          <div class="split-text">
-            <h2 class="section-title">Adaptado a tu vida real</h2>
-            <p class="section-lead">También tendremos en cuenta dónde haces normalmente la compra: Mercadona, DIA u otro supermercado. Así la lista de la compra será más práctica y fácil de seguir.</p>
-            <p class="tag-row">
-              <span class="tag">Mercadona</span>
-              <span class="tag">DIA</span>
-              <span class="tag">Otro súper</span>
-            </p>
-          </div>
+        <div class="section-heading">
+          <h2>Lo que más valoran</h2>
+        </div>
+        <div class="testimonials">
+          <blockquote>
+            <p>“Tenerlo organizado me ayuda a planificar toda la semana. Las preparaciones y las cantidades son la parte más útil.”</p>
+            <footer>Lorena</footer>
+          </blockquote>
+          <blockquote>
+            <p>“No tuve ningún problema para seguir el plan y me adapto muy bien a todas las comidas. Estoy muy contenta con cómo viene funcionando.”</p>
+            <footer>Aldi</footer>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <!-- ============ 8. FAQ ============ -->
-    <section class="section section-light" id="faq">
-      <div class="container narrow">
-        <h2 class="section-title">Preguntas frecuentes</h2>
+    <section class="section price-section" id="precio">
+      <div class="container price-layout">
+        <div class="price-heading">
+          <p>Ciclo completo de 60 días</p>
+          <h2><span>60</span> €</h2>
+          <p>Te confirmaremos la fecha estimada antes del pago.</p>
+        </div>
+
+        <div class="price-content">
+          <h3>Todo incluido</h3>
+          <p class="price-summary">3 bloques · 2 revisiones · dudas prácticas por WhatsApp</p>
+          <p>Pagas por Bizum o en efectivo después de que revisemos tu solicitud. Sin suscripción ni renovación automática.</p>
+          <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSftawxAbCEo_Q98-P0qoqUacB3MHXb90CQI1u-8iAF9OU73yw/viewform" target="_blank" rel="noopener">Solicitar mi guía</a>
+          <small>Revisamos primero y solo después te indicamos el pago.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-heading">
+          <h2>Preguntas frecuentes</h2>
+          <p>El detalle, cuando lo necesites.</p>
+        </div>
+
         <div class="faq">
-          <details class="faq-item">
-            <summary>¿Necesito ser alumno de Shaka?</summary>
-            <div class="faq-body"><p>No. El plan está pensado para alumnos del box, pero puede hacerlo cualquier persona que quiera organizar mejor su alimentación.</p></div>
+          <details>
+            <summary>¿Quién prepara la guía y qué límites tiene?</summary>
+            <div>
+              <p>La guía se genera con apoyo de IA a partir de datos anonimizados. Claudio Aponcio, entrenador CrossFit Level 2 y entrenador nacional de halterofilia, revisa cada página.</p>
+              <p>No está elaborada ni supervisada por un dietista-nutricionista, no sustituye atención nutricional o sanitaria y no realiza diagnósticos, tratamientos ni recomendaciones de suplementación.</p>
+            </div>
           </details>
-          <details class="faq-item">
-            <summary>¿El plan es solo para perder peso?</summary>
-            <div class="faq-body"><p>No. Sirve para perder grasa, ganar masa muscular, mejorar composición corporal o simplemente comer con más orden. Se adapta a tu objetivo.</p></div>
+
+          <details>
+            <summary>¿Qué contiene cada bloque?</summary>
+            <div><p>Una semana de comidas que se repite durante 20 días. El bloque siguiente incluye nuevas comidas y los ajustes acordados.</p></div>
           </details>
-          <details class="faq-item">
-            <summary>¿Cada cuánto recibo un plan?</summary>
-            <div class="faq-body"><p>Recibes un plan nuevo cada 20 días. Son 3 planes en total, unos 60 días.</p></div>
+
+          <details>
+            <summary>¿Cómo funcionan las revisiones y WhatsApp?</summary>
+            <div>
+              <p>Incluye dos revisiones, antes de los bloques 2 y 3. Las dudas de uso, preparación o sustituciones sencillas se responden en hasta 48 horas laborables.</p>
+              <p>Los cambios se aplican al siguiente bloque; el vigente solo se rehace por un error o una incompatibilidad ya declarada. WhatsApp no atiende consultas médicas.</p>
+            </div>
           </details>
-          <details class="faq-item">
-            <summary>¿Qué pasa si no me gusta algún alimento?</summary>
-            <div class="faq-body"><p>Lo tenemos en cuenta. En el formulario nos dices qué no te gusta y qué restricciones tienes, y el plan se ajusta a ello.</p></div>
+
+          <details>
+            <summary>¿Cómo se paga, entrega y renueva?</summary>
+            <div>
+              <p>Tras revisar el formulario, si podemos preparar la guía, te confirmamos la fecha estimada y el pago por Bizum o efectivo. Después de verificarlo, recibirás el PDF en Google Drive.</p>
+              <p>El ciclo termina sin renovación automática; otro ciclo cuesta 60 €.</p>
+            </div>
           </details>
-          <details class="faq-item">
-            <summary>¿Puedo hacerlo si como fuera o trabajo en oficina?</summary>
-            <div class="faq-body"><p>Sí. Adaptamos las comidas a tus horarios y a tu día a día para que sea realista, no una dieta imposible.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary>¿El precio incluye los 3 planes?</summary>
-            <div class="faq-body"><p>Sí. Los 60 € incluyen los 3 planes durante aproximadamente 60 días, con sus ajustes.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary>¿Cómo se paga?</summary>
-            <div class="faq-body"><p>En efectivo en el box o por PayPal. El pago por PayPal se confirma manualmente antes de preparar el plan.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary>¿Tengo que contar calorías?</summary>
-            <div class="faq-body"><p>No hace falta. El plan ya viene con cantidades e ingredientes, para que sigas comiendo sin estar pendiente de la calculadora.</p></div>
+
+          <details>
+            <summary>¿Qué ocurre con mis datos?</summary>
+            <div>
+              <p>Solo Claudio accede al formulario completo y a tu carpeta. La IA recibe datos anonimizados, sin identificadores directos. Se usan para prestar el servicio, no para publicidad.</p>
+              <p>Se eliminan tres meses después del último ciclo; si la solicitud no se acepta, en un máximo de 30 días.</p>
+            </div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- ============ 9. CTA FINAL ============ -->
-    <section class="section cta-final" id="empezar">
-      <div class="container narrow center">
-        <h2 class="cta-title">Empieza por organizar tu alimentación.</h2>
-        <p class="cta-lead">Rellena el formulario y prepararemos tu primer plan según tu objetivo, horarios, entrenamiento, gustos y supermercado habitual.</p>
-        <div class="btn-row btn-row-center">
-          <a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSftawxAbCEo_Q98-P0qoqUacB3MHXb90CQI1u-8iAF9OU73yw/viewform" target="_blank" rel="noopener">Rellenar formulario</a>
-          <a class="btn btn-whatsapp btn-lg" href="https://wa.me/34697287928" target="_blank" rel="noopener">
-            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.02ZM12.05 20.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
-            Escribir por WhatsApp
-          </a>
+    <section class="section final-cta">
+      <div class="container narrow">
+        <h2>Pon orden a tus comidas</h2>
+        <p>Cuéntanos tus horarios, gustos y posibles restricciones. Revisamos primero y solo después te indicamos el pago.</p>
+        <div class="button-row button-row-center">
+          <a class="button button-primary button-large" href="https://docs.google.com/forms/d/e/1FAIpQLSftawxAbCEo_Q98-P0qoqUacB3MHXb90CQI1u-8iAF9OU73yw/viewform" target="_blank" rel="noopener">Solicitar mi guía</a>
+          <a class="button button-secondary button-large" href="https://wa.me/34697287928" target="_blank" rel="noopener">Consultar por WhatsApp</a>
         </div>
+        <small>Formulario de unos 4 minutos.</small>
       </div>
     </section>
-
   </main>
 
-  <!-- ============ 10. FOOTER ============ -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="img/logo.png" alt="" class="footer-logo" aria-hidden="true" onerror="this.remove();" />
-        <span class="footer-brand-text"><span class="brand-mark">SHAKA</span><span class="brand-sub">CROSSFIT MADRID</span></span>
+    <div class="container footer-layout">
+      <div>
+        <strong>Guía de Alimentación Shaka</strong>
+        <p>Exclusivo para socios de Shaka. No sustituye una consulta con un dietista-nutricionista.</p>
       </div>
-      <address class="footer-contact">
-        Paseo de los Melancólicos 11, 28005 Madrid<br />
-        <a href="mailto:shakacrossfit@gmail.com">shakacrossfit@gmail.com</a><br />
+      <address>
+        <strong>Shaka CrossFit Madrid</strong>
+        <span>Paseo de los Melancólicos 11, 28005 Madrid</span>
+        <a href="mailto:shakacrossfit@gmail.com">shakacrossfit@gmail.com</a>
         <a href="https://wa.me/34697287928" target="_blank" rel="noopener">WhatsApp: 697 287 928</a>
       </address>
-      <p class="footer-disclaimer">
-        Servicio de orientación nutricional práctica para alumnos y personas interesadas en mejorar su alimentación.
-        No sustituye una consulta médica ni tratamiento sanitario.
-      </p>
-      <p class="footer-legal">© <span id="year">2026</span> Shaka CrossFit Madrid.</p>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> Shaka CrossFit</span>
+      <!-- Enlace a privacidad.html retirado: el texto sigue en borrador pendiente de
+           revision profesional. Restaurar cuando la politica este aprobada. -->
     </div>
   </footer>
 
-  <!-- CTA fijo en la parte inferior (solo móvil) — mejora de conversión -->
-  <div class="mobile-cta">
-    <a class="btn btn-primary mobile-cta-form" href="https://docs.google.com/forms/d/e/1FAIpQLSftawxAbCEo_Q98-P0qoqUacB3MHXb90CQI1u-8iAF9OU73yw/viewform" target="_blank" rel="noopener">Rellenar formulario</a>
-    <a class="btn btn-whatsapp mobile-cta-wa" href="https://wa.me/34697287928" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.02ZM12.05 20.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
-    </a>
+  <div class="mobile-actions" aria-label="Acciones rápidas" aria-hidden="true" inert>
+    <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSftawxAbCEo_Q98-P0qoqUacB3MHXb90CQI1u-8iAF9OU73yw/viewform" target="_blank" rel="noopener">Solicitar mi guía</a>
+    <a class="button button-whatsapp" href="https://wa.me/34697287928" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">WhatsApp</a>
   </div>
 
-  <!-- Botón flotante de WhatsApp (solo escritorio) -->
-  <a class="whatsapp-float" href="https://wa.me/34697287928" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.02ZM12.05 20.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
-  </a>
-
-  <script src="script.js" defer></script>
+  <dialog class="sample-dialog" id="sample-dialog" aria-labelledby="sample-dialog-title">
+    <div class="dialog-header">
+      <h2 id="sample-dialog-title">Muestra de la guía</h2>
+      <button type="button" id="sample-close" aria-label="Cerrar muestra">Cerrar</button>
+    </div>
+    <img
+      id="sample-dialog-image"
+      src="img/muestras/01-resumen-anonimizado.png"
+      alt="Resumen anonimizado de un bloque de la Guía de Alimentación Shaka"
+    >
+  </dialog>
 </body>
 </html>

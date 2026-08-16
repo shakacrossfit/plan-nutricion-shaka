@@ -1,95 +1,150 @@
-/* =====================================================================
-   Plan de Nutrición Shaka CrossFit — script.js
-   Mejoras progresivas: sin JS la página sigue siendo 100% funcional.
-   ===================================================================== */
 (function () {
   "use strict";
 
-  // Marca que hay JS (habilita las animaciones de entrada sin ocultar contenido sin JS)
-  document.documentElement.classList.add("js");
-
-  /* ---- Header: fondo sólido al hacer scroll ---- */
   var header = document.getElementById("site-header");
-  var onScroll = function () {
+  var navToggle = document.getElementById("nav-toggle");
+  var navToggleLabel = document.getElementById("nav-toggle-label");
+  var navMenu = document.getElementById("nav-menu");
+  var mobileActions = document.querySelector(".mobile-actions");
+  var heroPrimaryAction = document.querySelector(".hero .button-primary");
+  var finalCta = document.querySelector(".final-cta");
+  var sampleDialog = document.getElementById("sample-dialog");
+  var sampleDialogTitle = document.getElementById("sample-dialog-title");
+  var sampleDialogImage = document.getElementById("sample-dialog-image");
+  var sampleClose = document.getElementById("sample-close");
+  var sampleButtons = document.querySelectorAll(".sample-open");
+  var sampleTrigger = null;
+  var year = document.getElementById("year");
+  var actionUpdateQueued = false;
+
+  function updateHeader() {
     if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 24);
-  };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-
-  /* ---- Menú móvil ---- */
-  var toggle = document.getElementById("nav-toggle");
-  var menu = document.getElementById("nav-menu");
-
-  function closeMenu() {
-    if (!menu || !toggle) return;
-    menu.classList.remove("open");
-    toggle.setAttribute("aria-expanded", "false");
+    header.classList.toggle("is-scrolled", window.scrollY > 24);
   }
+
+  function closeMenu(restoreFocus) {
+    if (!navToggle || !navMenu) return;
+    var wasOpen = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", "false");
+    if (navToggleLabel) navToggleLabel.textContent = "Abrir menú";
+    navMenu.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+    requestMobileActionUpdate();
+
+    if (restoreFocus && wasOpen) {
+      window.requestAnimationFrame(function () {
+        navToggle.focus();
+      });
+    }
+  }
+
   function openMenu() {
-    if (!menu || !toggle) return;
-    menu.classList.add("open");
-    toggle.setAttribute("aria-expanded", "true");
+    if (!navToggle || !navMenu) return;
+    navToggle.setAttribute("aria-expanded", "true");
+    if (navToggleLabel) navToggleLabel.textContent = "Cerrar menú";
+    navMenu.classList.add("is-open");
+    document.body.classList.add("menu-open");
+    requestMobileActionUpdate();
   }
 
-  if (toggle && menu) {
-    toggle.addEventListener("click", function () {
-      var isOpen = toggle.getAttribute("aria-expanded") === "true";
-      isOpen ? closeMenu() : openMenu();
+  function updateMobileActions() {
+    actionUpdateQueued = false;
+    if (!mobileActions || !heroPrimaryAction || !finalCta) return;
+
+    var heroActionRect = heroPrimaryAction.getBoundingClientRect();
+    var finalCtaRect = finalCta.getBoundingClientRect();
+    var heroActionHasPassed = heroActionRect.bottom < 0;
+    var finalCtaHasArrived = finalCtaRect.top < window.innerHeight;
+    var shouldShow =
+      window.innerWidth <= 600 &&
+      heroActionHasPassed &&
+      !finalCtaHasArrived &&
+      !document.body.classList.contains("menu-open") &&
+      !document.body.classList.contains("dialog-open");
+
+    mobileActions.classList.toggle("is-visible", shouldShow);
+    mobileActions.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+    mobileActions.toggleAttribute("inert", !shouldShow);
+  }
+
+  function requestMobileActionUpdate() {
+    if (actionUpdateQueued) return;
+    actionUpdateQueued = true;
+    window.requestAnimationFrame(updateMobileActions);
+  }
+
+  updateHeader();
+  updateMobileActions();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+  window.addEventListener("scroll", requestMobileActionUpdate, { passive: true });
+  window.addEventListener("resize", requestMobileActionUpdate);
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", function () {
+      var isOpen = navToggle.getAttribute("aria-expanded") === "true";
+      if (isOpen) closeMenu(false);
+      else openMenu();
     });
-    // Cerrar al pulsar un enlace
-    menu.addEventListener("click", function (e) {
-      if (e.target.closest("a")) closeMenu();
+
+    navMenu.addEventListener("click", function (event) {
+      if (event.target.closest("a")) closeMenu(false);
     });
-    // Cerrar con Escape
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeMenu();
+
+    document.addEventListener("keydown", function (event) {
+      if (
+        event.key === "Escape" &&
+        navToggle.getAttribute("aria-expanded") === "true"
+      ) {
+        closeMenu(true);
+      }
     });
-    // Cerrar si se agranda la ventana a escritorio
+
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 860) closeMenu();
+      if (window.innerWidth > 1024) closeMenu(false);
     });
   }
 
-  /* ---- Animaciones de entrada (reveal) ---- */
-  // OJO: el hero NO se incluye: debe verse siempre, sin depender de la animación.
-  var revealEls = document.querySelectorAll(
-    ".section-title, .section-intro, .section-lead, .problem-list li, .check-list li, .feature, .step, .price-card, .split-media, .faq-item, .tag-row, .section .btn-row"
-  );
-
-  var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (prefersReduced || !("IntersectionObserver" in window)) {
-    // Sin animación: mostrar todo tal cual
-  } else {
-    revealEls.forEach(function (el, i) {
-      el.classList.add("reveal");
-      // Stagger ligero dentro de grupos cercanos
-      el.style.transitionDelay = (i % 6) * 45 + "ms";
+  if (sampleDialog && sampleDialogImage && sampleClose) {
+    sampleButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var caption = button.closest("figure").querySelector("figcaption");
+        sampleTrigger = button;
+        sampleDialogImage.src = button.dataset.sample || "";
+        sampleDialogImage.alt = button.dataset.alt || "Muestra de la guía";
+        if (sampleDialogTitle && caption) {
+          sampleDialogTitle.textContent = caption.textContent;
+        }
+        sampleDialog.showModal();
+        document.body.classList.add("dialog-open");
+        requestMobileActionUpdate();
+      });
     });
 
-    var io = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            io.unobserve(entry.target);
-          }
+    sampleClose.addEventListener("click", function () {
+      sampleDialog.close();
+    });
+
+    sampleDialog.addEventListener("click", function (event) {
+      if (event.target === sampleDialog) sampleDialog.close();
+    });
+
+    sampleDialog.addEventListener("close", function () {
+      document.body.classList.remove("dialog-open");
+      requestMobileActionUpdate();
+      sampleDialogImage.src = "img/muestras/01-resumen-anonimizado.png";
+      sampleDialogImage.alt =
+        "Resumen anonimizado de un bloque de la Guía de Alimentación Shaka";
+      if (sampleDialogTitle) sampleDialogTitle.textContent = "Muestra de la guía";
+      if (sampleTrigger) {
+        window.requestAnimationFrame(function () {
+          sampleTrigger.focus();
+          sampleTrigger = null;
         });
-      },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
-    );
-
-    revealEls.forEach(function (el) { io.observe(el); });
-
-    // Red de seguridad: si el observer no dispara (pestaña en 2º plano,
-    // renderers headless, etc.), mostrar todo igualmente. Nunca dejar contenido oculto.
-    setTimeout(function () {
-      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
-    }, 1100);
+      }
+    });
   }
 
-  /* ---- Año del footer ---- */
-  var yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  if (year) {
+    year.textContent = String(new Date().getFullYear());
+  }
 })();
