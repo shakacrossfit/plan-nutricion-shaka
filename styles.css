@@ -905,19 +905,6 @@ section[id] {
   line-height: 1.2;
 }
 
-.price-content .price-cupo {
-  margin-top: var(--space-lg);
-  padding: var(--space-md) var(--space-lg);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 var(--radius-small) var(--radius-small) 0;
-  background: var(--surface);
-  color: var(--on-dark);
-}
-
-.price-content .price-cupo strong {
-  color: var(--accent);
-}
-
 .price-content .button {
   margin-top: var(--space-xl);
 }
