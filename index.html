@@ -334,15 +334,15 @@
   </div>
 
   <dialog class="sample-dialog" id="sample-dialog" aria-labelledby="sample-dialog-title">
-    <div class="dialog-header">
-      <h2 id="sample-dialog-title">Muestra de la guía</h2>
-      <button type="button" id="sample-close" aria-label="Cerrar muestra">Cerrar</button>
-    </div>
+    <h2 id="sample-dialog-title" class="visually-hidden">Muestra de la guía</h2>
     <img
       id="sample-dialog-image"
       src="img/muestras/01-resumen-anonimizado.png"
       alt="Resumen anonimizado de un bloque de la Guía de Alimentación Shaka"
     >
+    <button type="button" id="sample-close" class="dialog-close" aria-label="Cerrar muestra">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </dialog>
 </body>
 </html>

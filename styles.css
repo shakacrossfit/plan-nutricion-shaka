@@ -1102,17 +1102,24 @@ section[id] {
   backdrop-filter: blur(0.75rem);
 }
 
+/* El dialogo se ajusta a la imagen en vez de imponerle un ancho fijo:
+   asi la muestra entra entera en cualquier orientacion y no hace falta scroll. */
 .sample-dialog {
   z-index: var(--z-dialog);
-  width: min(94vw, 61rem);
-  max-width: none;
+  inset: 0;
+  width: fit-content;
+  height: fit-content;
+  max-width: 96vw;
   max-height: 92vh;
+  max-height: 92dvh;
+  /* el reset global pisa el margin:auto con el que el navegador centra
+     los dialog modales, asi que se repone aqui */
+  margin: auto;
   padding: 0;
   border: 0;
-  border-radius: var(--radius);
   color: var(--on-dark);
-  background: var(--surface);
-  overflow: auto;
+  background: transparent;
+  overflow: visible;
 }
 
 .sample-dialog::backdrop {
@@ -1120,37 +1127,44 @@ section[id] {
   backdrop-filter: blur(0.25rem);
 }
 
-.dialog-header {
-  position: sticky;
-  z-index: 1;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-lg);
-  padding: var(--space-md) var(--space-lg);
-  border-bottom: 1px solid var(--line-dark);
-  background: var(--surface);
+/* La muestra cabe entera: limitada por ancho y por alto a la vez.
+   dvh para que la barra del navegador movil no la recorte. */
+.sample-dialog img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 96vw;
+  max-height: 92vh;
+  max-height: 92dvh;
+  border-radius: var(--radius);
 }
 
-.dialog-header h2 {
-  font-size: 1.5rem;
-}
-
-.dialog-header button {
-  min-height: 2.75rem;
-  padding: 0.55rem 0.85rem;
-  border: 1px solid var(--line-dark);
-  border-radius: var(--radius-small);
+/* Cerrar en la esquina de la pantalla, no sobre la muestra: asi no tapa el
+   badge ni el titulo de la pagina. Antes era una barra fija arriba, y era
+   justo lo que robaba el alto que recortaba la imagen.
+   position: fixed se resuelve contra el viewport porque el dialogo modal
+   vive en el top layer. */
+.dialog-close {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
   color: var(--white);
-  background: transparent;
-  font-weight: 700;
+  background: rgba(0, 0, 0, 0.66);
+  font-size: 1.5rem;
+  line-height: 1;
   cursor: pointer;
 }
 
-.sample-dialog > img {
-  width: 75rem;
-  max-width: none;
+.dialog-close:hover,
+.dialog-close:focus-visible {
+  background: rgba(0, 0, 0, 0.85);
 }
 
 @media (min-width: 64rem) {

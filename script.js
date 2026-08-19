@@ -136,9 +136,12 @@
         "Resumen anonimizado de un bloque de la Guía de Alimentación Shaka";
       if (sampleDialogTitle) sampleDialogTitle.textContent = "Muestra de la guía";
       if (sampleTrigger) {
+        // se guarda en local: abrir y cerrar rapido anulaba sampleTrigger
+        // antes de que corriera el frame y reventaba al llamar a focus()
+        var triggerPrevio = sampleTrigger;
+        sampleTrigger = null;
         window.requestAnimationFrame(function () {
-          sampleTrigger.focus();
-          sampleTrigger = null;
+          triggerPrevio.focus();
         });
       }
     });
