@@ -133,7 +133,7 @@
       requestMobileActionUpdate();
       sampleDialogImage.src = "img/muestras/01-resumen-anonimizado.png";
       sampleDialogImage.alt =
-        "Resumen anonimizado de un bloque de la Guía de Alimentación Shaka";
+        "Portada de un ejemplo ficticio de la Guía de Alimentación Shaka";
       if (sampleDialogTitle) sampleDialogTitle.textContent = "Muestra de la guía";
       if (sampleTrigger) {
         // se guarda en local: abrir y cerrar rapido anulaba sampleTrigger

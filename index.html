@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'self'">
   <meta name="theme-color" content="#050607">
   <meta name="description" content="Organiza tus comidas con una guía práctica adaptada a tu entrenamiento, horarios y gustos. Tres bloques progresivos durante 60 días. Exclusiva para socios de Shaka CrossFit.">
   <link rel="canonical" href="https://shakacrossfit.github.io/plan-nutricion-shaka/">
@@ -55,7 +56,7 @@
       <nav class="main-nav" aria-label="Navegación principal">
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#incluye">Qué recibes</a></li>
-          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#recorrido">Recorrido</a></li>
           <li><a href="#precio">Precio</a></li>
           <li><a href="#faq">Dudas</a></li>
           <li class="nav-cta">
@@ -93,13 +94,13 @@
       <div class="container">
         <div class="section-heading">
           <h2>Mira la guía por dentro</h2>
-          <p>Una muestra anonimizada del formato que recibirás.</p>
+          <p>Un ejemplo ficticio del formato que recibirás.</p>
         </div>
 
         <div class="sample-gallery">
           <figure class="sample">
-            <button type="button" class="sample-open" aria-haspopup="dialog" aria-controls="sample-dialog" data-sample="img/muestras/01-resumen-anonimizado.png" data-alt="Resumen anonimizado de un bloque de la Guía de Alimentación Shaka">
-              <img src="img/muestras/01-resumen-anonimizado.png" width="1200" height="1697" loading="lazy" decoding="async" alt="Resumen anonimizado de un bloque de la Guía de Alimentación Shaka">
+            <button type="button" class="sample-open" aria-haspopup="dialog" aria-controls="sample-dialog" data-sample="img/muestras/01-resumen-anonimizado.png" data-alt="Portada de un ejemplo ficticio de la Guía de Alimentación Shaka">
+              <img src="img/muestras/01-resumen-anonimizado.png" width="1200" height="1697" loading="lazy" decoding="async" alt="Portada de un ejemplo ficticio de la Guía de Alimentación Shaka">
               <span>Ver ampliada</span>
             </button>
             <figcaption>Resumen</figcaption>
@@ -120,6 +121,10 @@
             </button>
             <figcaption>Lista de la compra</figcaption>
           </figure>
+        </div>
+        <div class="button-row button-row-center sample-actions">
+          <a class="button button-primary" href="downloads/muestra-plan-ficticio.pdf">Abrir el PDF de muestra</a>
+          <a class="button button-secondary" href="muestra-accesible.html">Leer la versión accesible</a>
         </div>
       </div>
     </section>
@@ -165,28 +170,34 @@
       </div>
     </section>
 
-    <section class="section process-section" id="como-funciona">
+    <section class="section process-section" id="recorrido">
       <div class="container">
-        <div class="section-heading">
-          <h2>Cómo funciona</h2>
+        <div class="section-heading journey-heading">
+          <p class="journey-kicker">60 días con un recorrido claro</p>
+          <h2>No son tres PDFs sueltos.</h2>
+          <p>Cada bloque usa una semana de siete días que repites durante 20 días. En las dos revisiones nos cuentas qué funciona y qué conviene ajustar para el bloque siguiente.</p>
         </div>
 
-        <ol class="process-list">
+        <ol class="process-list" aria-label="Recorrido de los tres bloques">
           <li>
             <span>01</span>
-            <div><h3>Solicitud</h3><p>Rellenas el formulario. Tarda unos 4 minutos.</p></div>
+            <div><p class="process-label">Días 1–20</p><h3>Adaptación</h3><p>Empiezas con recetas, cantidades, métodos y tiempos ajustados a lo que has contado.</p></div>
           </li>
           <li>
             <span>02</span>
-            <div><h3>Revisión y pago</h3><p>Comprobamos que el servicio encaja. Si es así, te damos una fecha estimada y las instrucciones de pago.</p></div>
+            <div><p class="process-label">Feedback 1</p><h3>Ajuste</h3><p>Revisamos adherencia, hambre y saciedad percibidas, dificultades, gustos y experiencia de entrenamiento.</p></div>
           </li>
           <li>
             <span>03</span>
-            <div><h3>Entrega</h3><p>Tras verificar el pago, compartimos el primer PDF en una carpeta privada de Google Drive.</p></div>
+            <div><p class="process-label">Días 21–40</p><h3>Segundo bloque</h3><p>Aplicamos los cambios acordados. Si falta información, no inventamos respuestas.</p></div>
           </li>
           <li>
             <span>04</span>
-            <div><h3>Ajustes</h3><p>Hacemos dos revisiones y aplicamos los cambios al bloque siguiente.</p></div>
+            <div><p class="process-label">Feedback 2</p><h3>Segundo ajuste</h3><p>Revisamos la experiencia del segundo bloque antes de preparar el cierre.</p></div>
+          </li>
+          <li>
+            <span>05</span>
+            <div><p class="process-label">Días 41–60</p><h3>Tercer bloque y cierre</h3><p>El último bloque recoge lo que funciona y cierra el servicio, sin renovación automática.</p></div>
           </li>
         </ol>
       </div>
@@ -234,7 +245,7 @@
         <div class="price-heading">
           <p>Ciclo completo de 60 días</p>
           <h2><span>60</span> €</h2>
-          <p>Te confirmaremos la fecha estimada antes del pago.</p>
+          <p>Acordaremos la fecha de inicio después del pago.</p>
         </div>
 
         <div class="price-content">
@@ -250,46 +261,28 @@
     <section class="section faq-section" id="faq">
       <div class="container faq-layout">
         <div class="faq-heading">
-          <h2>Preguntas frecuentes</h2>
-          <p>El detalle, cuando lo necesites.</p>
+          <h2>Sin letra pequeña escondida.</h2>
         </div>
 
         <div class="faq">
           <details>
-            <summary>¿Quién prepara la guía y qué límites tiene?</summary>
-            <div>
-              <p>La guía se genera con apoyo de IA a partir de datos anonimizados. Claudio Aponcio, entrenador CrossFit Level 2 y entrenador nacional de halterofilia, revisa cada página.</p>
-              <p>No está elaborada ni supervisada por un dietista-nutricionista, no sustituye atención nutricional o sanitaria y no realiza diagnósticos, tratamientos ni recomendaciones de suplementación.</p>
-            </div>
+            <summary>¿Es una dieta o un plan médico?</summary>
+            <div><p>No. Es una guía práctica de alimentación. Los casos que necesitan diagnóstico, tratamiento o criterio clínico se detienen y derivan.</p></div>
           </details>
 
           <details>
-            <summary>¿Qué contiene cada bloque?</summary>
-            <div><p>Una semana de comidas que se repite durante 20 días. El bloque siguiente incluye nuevas comidas y los ajustes acordados.</p></div>
+            <summary>¿Cada bloque trae un menú distinto para cada uno de sus 20 días?</summary>
+            <div><p>No. Cada bloque contiene siete días completos que se repiten durante su tramo de 20 días.</p></div>
           </details>
 
           <details>
-            <summary>¿Cómo funcionan las revisiones y WhatsApp?</summary>
-            <div>
-              <p>Incluye dos revisiones, antes de los bloques 2 y 3. Las dudas de uso, preparación o sustituciones sencillas se responden en hasta 48 horas laborables.</p>
-              <p>Los cambios se aplican al siguiente bloque; el vigente solo se rehace por un error o una incompatibilidad ya declarada. WhatsApp no atiende consultas médicas.</p>
-            </div>
+            <summary>¿Cuándo pago?</summary>
+            <div><p>Después de revisar el encaje y aceptar continuar. Una vez confirmado el pago, acordamos contigo la fecha por correo.</p></div>
           </details>
 
           <details>
-            <summary>¿Cómo se paga, entrega y renueva?</summary>
-            <div>
-              <p>Tras revisar el formulario, si podemos preparar la guía, te confirmamos la fecha estimada y el pago por Bizum o efectivo. Después de verificarlo, recibirás el PDF en Google Drive.</p>
-              <p>El ciclo termina sin renovación automática; otro ciclo cuesta 60 €.</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>¿Qué ocurre con mis datos?</summary>
-            <div>
-              <p>Solo Claudio accede al formulario completo y a tu carpeta. La IA recibe datos anonimizados, sin identificadores directos. Se usan para prestar el servicio, no para publicidad.</p>
-              <p>Se eliminan tres meses después del último ciclo; si la solicitud no se acepta, en un máximo de 30 días.</p>
-            </div>
+            <summary>¿La guía incluye suplementos?</summary>
+            <div><p>No. La guía no añade suplementos por defecto.</p></div>
           </details>
         </div>
       </div>
@@ -301,7 +294,7 @@
         <p>Cuéntanos tus horarios, gustos y posibles restricciones. Revisamos primero y solo después te indicamos el pago.</p>
         <div class="button-row button-row-center">
           <a class="button button-primary button-large" href="https://docs.google.com/forms/d/e/1FAIpQLSftawxAbCEo_Q98-P0qoqUacB3MHXb90CQI1u-8iAF9OU73yw/viewform" target="_blank" rel="noopener">Solicitar mi guía</a>
-          <a class="button button-secondary button-large" href="https://wa.me/34697287928" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          <a class="button button-whatsapp button-large" href="https://wa.me/34697287928" target="_blank" rel="noopener">Consultar por WhatsApp</a>
         </div>
         <small>Formulario de unos 4 minutos.</small>
       </div>
@@ -323,8 +316,6 @@
     </div>
     <div class="container footer-bottom">
       <span>© <span id="year">2026</span> Shaka CrossFit</span>
-      <!-- Enlace a privacidad.html retirado: el texto sigue en borrador pendiente de
-           revision profesional. Restaurar cuando la politica este aprobada. -->
     </div>
   </footer>
 
@@ -338,7 +329,7 @@
     <img
       id="sample-dialog-image"
       src="img/muestras/01-resumen-anonimizado.png"
-      alt="Resumen anonimizado de un bloque de la Guía de Alimentación Shaka"
+      alt="Portada de un ejemplo ficticio de la Guía de Alimentación Shaka"
     >
     <button type="button" id="sample-close" class="dialog-close" aria-label="Cerrar muestra">
       <span aria-hidden="true">&times;</span>
