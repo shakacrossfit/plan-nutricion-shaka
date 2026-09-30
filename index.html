@@ -32,8 +32,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
-  <script src="script.js?v=2" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260930">
+  <script src="script.js?v=20260930" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -99,31 +99,31 @@
 
         <div class="sample-gallery">
           <figure class="sample">
-            <button type="button" class="sample-open" aria-haspopup="dialog" aria-controls="sample-dialog" data-sample="img/muestras/01-resumen-anonimizado.png" data-alt="Portada de un ejemplo ficticio de la Guía de Alimentación Shaka">
-              <img src="img/muestras/01-resumen-anonimizado.png" width="1200" height="1697" loading="lazy" decoding="async" alt="Portada de un ejemplo ficticio de la Guía de Alimentación Shaka">
+            <button type="button" class="sample-open" aria-haspopup="dialog" aria-controls="sample-dialog" data-sample="img/muestras/01-resumen-anonimizado.png?v=20260930" data-page="1" data-alt="Portada de un ejemplo ficticio de la Guía de Alimentación Shaka">
+              <img src="img/muestras/01-resumen-anonimizado.png?v=20260930" width="2479" height="3508" loading="lazy" decoding="async" alt="Portada de un ejemplo ficticio de la Guía de Alimentación Shaka">
               <span>Ver ampliada</span>
             </button>
             <figcaption>Resumen</figcaption>
           </figure>
 
           <figure class="sample">
-            <button type="button" class="sample-open" aria-haspopup="dialog" aria-controls="sample-dialog" data-sample="img/muestras/02-dia-completo.png" data-alt="Día completo de comidas con ingredientes, cantidades y preparaciones">
-              <img src="img/muestras/02-dia-completo.png" width="1200" height="1697" loading="lazy" decoding="async" alt="Día completo de comidas con ingredientes, cantidades y preparaciones">
+            <button type="button" class="sample-open" aria-haspopup="dialog" aria-controls="sample-dialog" data-sample="img/muestras/02-dia-completo.png?v=20260930" data-page="2" data-alt="Día completo de comidas con ingredientes, cantidades y preparaciones">
+              <img src="img/muestras/02-dia-completo.png?v=20260930" width="2479" height="3508" loading="lazy" decoding="async" alt="Día completo de comidas con ingredientes, cantidades y preparaciones">
               <span>Ver ampliada</span>
             </button>
             <figcaption>Comidas y cantidades</figcaption>
           </figure>
 
           <figure class="sample">
-            <button type="button" class="sample-open" aria-haspopup="dialog" aria-controls="sample-dialog" data-sample="img/muestras/03-lista-compra.png" data-alt="Lista semanal de la compra organizada por categorías">
-              <img src="img/muestras/03-lista-compra.png" width="1200" height="1697" loading="lazy" decoding="async" alt="Lista semanal de la compra organizada por categorías">
+            <button type="button" class="sample-open" aria-haspopup="dialog" aria-controls="sample-dialog" data-sample="img/muestras/03-lista-compra.png?v=20260930" data-page="9" data-alt="Lista semanal de la compra organizada por categorías">
+              <img src="img/muestras/03-lista-compra.png?v=20260930" width="2479" height="3508" loading="lazy" decoding="async" alt="Lista semanal de la compra organizada por categorías">
               <span>Ver ampliada</span>
             </button>
             <figcaption>Lista de la compra</figcaption>
           </figure>
         </div>
         <div class="button-row button-row-center sample-actions">
-          <a class="button button-primary" href="downloads/muestra-plan-ficticio.pdf">Abrir el PDF de muestra</a>
+          <a class="button button-primary" href="downloads/muestra-plan-ficticio.pdf?v=20260930">Abrir el PDF de muestra</a>
           <a class="button button-secondary" href="muestra-accesible.html">Leer la versión accesible</a>
         </div>
       </div>
@@ -163,10 +163,6 @@
           </div>
         </div>
 
-        <aside class="support-strip">
-          <h3>Dudas por WhatsApp</h3>
-          <p>Uso de la guía y sustituciones sencillas. Respuesta en hasta 48 horas laborables.</p>
-        </aside>
       </div>
     </section>
 
@@ -325,12 +321,17 @@
   </div>
 
   <dialog class="sample-dialog" id="sample-dialog" aria-labelledby="sample-dialog-title">
-    <h2 id="sample-dialog-title" class="visually-hidden">Muestra de la guía</h2>
-    <img
-      id="sample-dialog-image"
-      src="img/muestras/01-resumen-anonimizado.png"
-      alt="Portada de un ejemplo ficticio de la Guía de Alimentación Shaka"
-    >
+    <div class="dialog-toolbar">
+      <h2 id="sample-dialog-title">Muestra de la guía</h2>
+      <a id="sample-dialog-pdf" href="downloads/muestra-plan-ficticio.pdf?v=20260930#page=1" target="_blank" rel="noopener">Abrir en PDF</a>
+    </div>
+    <div class="dialog-image-scroll">
+      <img
+        id="sample-dialog-image"
+        src="img/muestras/01-resumen-anonimizado.png?v=20260930"
+        alt="Portada de un ejemplo ficticio de la Guía de Alimentación Shaka"
+      >
+    </div>
     <button type="button" id="sample-close" class="dialog-close" aria-label="Cerrar muestra">
       <span aria-hidden="true">&times;</span>
     </button>

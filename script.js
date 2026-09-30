@@ -11,6 +11,8 @@
   var sampleDialog = document.getElementById("sample-dialog");
   var sampleDialogTitle = document.getElementById("sample-dialog-title");
   var sampleDialogImage = document.getElementById("sample-dialog-image");
+  var sampleDialogPdf = document.getElementById("sample-dialog-pdf");
+  var sampleDialogScroll = document.querySelector(".dialog-image-scroll");
   var sampleClose = document.getElementById("sample-close");
   var sampleButtons = document.querySelectorAll(".sample-open");
   var sampleTrigger = null;
@@ -111,10 +113,17 @@
         sampleTrigger = button;
         sampleDialogImage.src = button.dataset.sample || "";
         sampleDialogImage.alt = button.dataset.alt || "Muestra de la guía";
+        if (sampleDialogPdf) {
+          sampleDialogPdf.href = "downloads/muestra-plan-ficticio.pdf?v=20260930#page=" + (button.dataset.page || "1");
+        }
         if (sampleDialogTitle && caption) {
           sampleDialogTitle.textContent = caption.textContent;
         }
         sampleDialog.showModal();
+        if (sampleDialogScroll) {
+          sampleDialogScroll.scrollTop = 0;
+          sampleDialogScroll.scrollLeft = 0;
+        }
         document.body.classList.add("dialog-open");
         requestMobileActionUpdate();
       });
@@ -131,7 +140,7 @@
     sampleDialog.addEventListener("close", function () {
       document.body.classList.remove("dialog-open");
       requestMobileActionUpdate();
-      sampleDialogImage.src = "img/muestras/01-resumen-anonimizado.png";
+      sampleDialogImage.src = "img/muestras/01-resumen-anonimizado.png?v=20260930";
       sampleDialogImage.alt =
         "Portada de un ejemplo ficticio de la Guía de Alimentación Shaka";
       if (sampleDialogTitle) sampleDialogTitle.textContent = "Muestra de la guía";

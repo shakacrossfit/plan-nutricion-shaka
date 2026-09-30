@@ -1129,12 +1129,11 @@ section[id] {
   backdrop-filter: blur(0.75rem);
 }
 
-/* El dialogo se ajusta a la imagen en vez de imponerle un ancho fijo:
-   asi la muestra entra entera en cualquier orientacion y no hace falta scroll. */
+/* Show the reviewed high-resolution page at a readable width. */
 .sample-dialog {
   z-index: var(--z-dialog);
   inset: 0;
-  width: fit-content;
+  width: min(60rem, 96vw);
   height: fit-content;
   max-width: 96vw;
   max-height: 92vh;
@@ -1145,8 +1144,13 @@ section[id] {
   padding: 0;
   border: 0;
   color: var(--on-dark);
-  background: transparent;
-  overflow: visible;
+  background: var(--black);
+  overflow: hidden;
+}
+
+.sample-dialog[open] {
+  display: flex;
+  flex-direction: column;
 }
 
 .sample-dialog::backdrop {
@@ -1154,16 +1158,46 @@ section[id] {
   backdrop-filter: blur(0.25rem);
 }
 
-/* La muestra cabe entera: limitada por ancho y por alto a la vez.
-   dvh para que la barra del navegador movil no la recorte. */
+.dialog-toolbar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4rem;
+  padding: 0.75rem 3.5rem 0.75rem 1rem;
+}
+
+.dialog-toolbar h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.dialog-toolbar a {
+  flex-shrink: 0;
+  padding: 0.5rem 0;
+  color: var(--cyan);
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.dialog-image-scroll {
+  flex: 1;
+  min-height: 0;
+  max-height: calc(92vh - 4rem);
+  max-height: calc(92dvh - 4rem);
+  overflow: auto;
+  background: var(--white);
+}
+
 .sample-dialog img {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
-  max-width: 96vw;
-  max-height: 92vh;
-  max-height: 92dvh;
-  border-radius: var(--radius);
+  max-width: none;
+  max-height: none;
+  border-radius: 0;
 }
 
 /* Cerrar en la esquina de la pantalla, no sobre la muestra: asi no tapa el
